@@ -1,0 +1,59 @@
+<html>
+<body>
+    
+    <div class="card" style="background-color: darkmagenta; width: 50px; height: 50px ;">
+    <div class="card" style="background-color: darkmagenta; width: 50px; height: 50px ; margin-left: 100px;">
+    <div class="card" style="background-color: darkmagenta; width: 50px; height: 50px ; margin-left: 100px;">
+    </div></div></div>
+
+    <div class="card" style="background-color: darkmagenta; width: 50px; height: 50px ;margin-top: 50px;">
+    <div class="card" style="background-color: darkmagenta; width: 50px; height: 50px ; margin-left: 100px;">
+    <div class="card" style="background-color: darkmagenta; width: 50px; height: 50px ; margin-left: 100px;">
+    </div></div></div>
+
+    <div class="card" style="background-color: darkmagenta; width: 50px; height: 50px ;margin-top: 50px;">
+    <div class="card" style="background-color: darkmagenta; width: 50px; height: 50px ; margin-left: 100px;">
+    <div class="card" style="background-color: darkmagenta; width: 50px; height: 50px ; margin-left: 100px;">
+    </div></div></div>
+
+    <div class="card" style="background-color: darkmagenta; width: 50px; height: 50px ;margin-top: 50px;">
+    <div class="card" style="background-color: darkmagenta; width: 50px; height: 50px ; margin-left: 100px;">
+    <div class="card" style="background-color: darkmagenta; width: 50px; height: 50px ; margin-left: 100px;">
+    </div></div></div>
+    
+    <script>
+
+        let card = document.getElementsByClassName("card");
+       
+        let mostGreen= 0; 
+        for(let i = 0; i <= 12; i++) {
+            card.onclick = function(e){
+            card.style.backgroundColor = 'green';
+            mostGreen++;
+            while ( mostGreen == 8)
+            {
+                alert("*-*-*-*-*- congratulation -*-*-*-*-*")
+            }
+            }
+        }
+
+        let mostRed = 0;
+        let randOne = Math.floor(Math.random() * 12);
+        let randTwo = Math.floor(Math.random() * 12);
+        let randThree = Math.floor(Math.random() * 12);
+        let randFour = Math.floor(Math.random() * 12);
+        for(let a = 0; a <= 4; a++) {
+            card.onclick = function(e){
+            if (card == randOne || card == randTwo || card == randThree || card == randFour )
+            card.style.backgroundColor = 'red';
+            mostRed++;
+            while ( mostRed == 4)
+            {
+                alert("GAME OVER !")
+            }
+            }
+        }
+    
+    </script>
+</body>
+</html>
